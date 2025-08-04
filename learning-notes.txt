@@ -1,0 +1,91 @@
+Learning Notes - Full-stack developer training at OFPPT (2024-2026)
+
+Topics Covered:
+- PHP and object-oriented programming
+- CRUD operations with MySQL
+- Laravel routes, Blade, controllers, and authentication
+- HTML/CSS layout and structure
+- JavaScript fundamentals and React components
+- Git and GitHub usage
+
+Status: Work in progress. Updated regularly during training.
+
+--------------------------
+PHP Basics
+--------------------------
+
+Variables and Data Types:
+$name = "Abdo";        // string
+$age = 20;             // integer
+$price = 99.99;        // float
+$isAvailable = true;   // boolean
+
+Conditional Statements:
+if ($age >= 18) {
+    echo "Access granted";
+} else {
+    echo "Access denied";
+}
+
+Loops:
+for ($i = 0; $i < 5; $i++) {
+    echo $i;
+}
+
+Functions:
+function greet($name) {
+    return "Hello, $name!";
+}
+echo greet($name);
+
+--------------------------
+PDO MySQL Connection
+--------------------------
+
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=test", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected to database successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
+--------------------------
+JavaScript Notes
+--------------------------
+
+Variables:
+let name = "Abdo";
+const age = 20;
+
+Functions:
+function greet(name) {
+  return "Hello " + name;
+}
+
+Event Listener Example:
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+
+--------------------------
+Git & GitHub Basics
+--------------------------
+
+Initialize a Git repository:
+git init
+
+Clone a repository:
+git clone https://github.com/username/repo.git
+
+Basic workflow:
+git add .
+git commit -m "Your message"
+git push origin main
+
+Create a new branch:
+git checkout -b feature-branch
+
+Merge branch:
+git checkout main
+git merge feature-branch
