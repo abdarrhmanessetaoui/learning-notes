@@ -1,0 +1,189 @@
+======================
+  Fullstack Developer Notes
+======================
+
+Author: Abdarrhmane Settaoui  
+Training: OFPPT Fullstack Dev 2024-2026
+
+---
+
+1. PHP Basics & OOP
+
+- PHP is a server-side scripting language used for web dev.
+- Variables start with $.
+- Basic syntax example:
+  <?php
+    echo "Hello World!";
+  ?>
+
+- Object-Oriented Programming (OOP):
+  - Class: blueprint for objects.
+  - Object: instance of a class.
+  - Properties and Methods.
+  - Example:
+
+  class User {
+    public $name;
+
+    public function __construct($name) {
+      $this->name = $name;
+    }
+
+    public function greet() {
+      return "Hello, " . $this->name;
+    }
+  }
+
+- Access modifiers: public, private, protected.
+- Static methods and properties.
+- Inheritance allows a class to extend another.
+
+---
+
+2. Git & GitHub Essentials
+
+- Git is a version control system to track changes in code.
+- GitHub is a cloud platform to host git repositories.
+
+Basic commands:
+
+- git init : Initialize a repo.
+- git add <file> : Stage changes.
+- git commit -m "message" : Save snapshot.
+- git push origin main : Upload to GitHub.
+- git pull : Get latest from GitHub.
+
+Working with remote repos:
+
+- Clone repo: git clone <url>
+- Branching: git branch, git checkout -b <branch>
+- Merging: git merge <branch>
+
+GitHub features:
+
+- Pull requests for code review.
+- Issues for bug tracking.
+- Actions for automation.
+
+---
+
+3. JavaScript Fundamentals
+
+- JavaScript runs in browser, adds interactivity.
+- Variables: var, let, const.
+- Functions:
+
+  function greet(name) {
+    return "Hello " + name;
+  }
+
+- DOM manipulation:
+
+  document.getElementById("id").textContent = "Hi";
+
+- Events:
+
+  button.addEventListener("click", function() { ... });
+
+- ES6+ features: arrow functions, template literals, destructuring.
+
+---
+
+4. HTML & CSS Tips
+
+- HTML is structure, CSS is style.
+- Semantic tags: <header>, <nav>, <section>, <footer>.
+- CSS selectors: class(.class), id(#id), element(tag).
+- Flexbox and Grid for layouts.
+- Responsive design with media queries:
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+- Use variables in CSS (--main-color: #123456).
+
+---
+
+5. Laravel Overview
+
+- PHP framework for MVC architecture.
+- Routes: define URL handling in routes/web.php
+- Controllers: logic handler.
+- Blade templates: clean HTML with PHP.
+- Eloquent ORM for database models.
+- Middleware for request filtering.
+- Artisan CLI for commands.
+
+---
+
+6. React Quick Intro
+
+- React builds UI with components.
+- Components can be function or class.
+- JSX syntax mixes HTML with JS.
+- State and props manage data.
+- useState hook manages state in function components.
+- Virtual DOM for efficient updates.
+
+Example:
+
+function Hello() {
+  const [name, setName] = React.useState("Abdarrhmane");
+  return <h1>Hello, {name}!</h1>;
+}
+
+---
+
+7. CRUD with MySQL Basics
+
+- CRUD = Create, Read, Update, Delete.
+- Use SQL commands:
+
+  - Create table:
+
+    CREATE TABLE users (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      name VARCHAR(100),
+      email VARCHAR(100)
+    );
+
+  - Insert data:
+
+    INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
+
+  - Select data:
+
+    SELECT * FROM users;
+
+  - Update data:
+
+    UPDATE users SET name = 'Jane' WHERE id = 1;
+
+  - Delete data:
+
+    DELETE FROM users WHERE id = 1;
+
+- Connect PHP to MySQL with PDO:
+
+  $pdo = new PDO("mysql:host=localhost;dbname=test", "user", "password");
+
+- Prepare statements for security:
+
+  $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
+  $stmt->execute([$id]);
+
+---
+
+End of Notes.
+
+---
+
+Save this as **learning-notes.txt** or any name you prefer.
+
+---
+
+If you want me to add more topics or specific examples/code snippets, just tell me!  
+Or if you want this formatted as markdown or HTML for GitHub README, I can do that too.
